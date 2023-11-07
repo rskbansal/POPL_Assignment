@@ -4,8 +4,9 @@ use dotenv;
 use core::option::Option;
 use tokio;
 use futures::{stream, StreamExt};
+use std::time::Instant;
 
-const CONCURRENT_REQUESTS: usize = 5;
+const CONCURRENT_REQUESTS: usize = 100;
 
 #[derive(Parser)]
 #[command(name="weather")]
@@ -41,11 +42,16 @@ async fn main() {
     let urls = vec!["http://localhost:5000/get_weather?city=London"; CONCURRENT_REQUESTS];
     // let url = format!("http://localhost:6969/get_weather?city=London");
 
+    
     let bodies = stream::iter(urls)
         .map(|url| {
             let client = &client;
             async move {
+                let start_time = Instant::now(); // Record the start time
                 let resp = client.get(url).send().await?;
+                let end_time = Instant::now(); // Record the start time
+                let response_time = end_time.duration_since(start_time); // Calculate the response time
+                println!("Response time for {}: {:?}", url, response_time);
                 resp.bytes().await
             }
         })
