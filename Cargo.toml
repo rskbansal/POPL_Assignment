@@ -10,4 +10,5 @@ clap = { version = "4.4.7", features = ["derive", "wrap_help"] }
 dotenv = { version = "0.15.0", features = ["clap"] }
 futures = "0.3.29"
 reqwest = { version = "0.11.22", features = ["json", "gzip", "deflate", "blocking"] }
+time = "0.3.30"
 tokio = { version = "1.33.0", features = ["full"] }
