@@ -9,7 +9,7 @@ def get_request():
     print(end - start)
 
 threads = []
-for i in range(100):
+for i in range(20):
     t = threading.Thread(target=get_request)
     threads.append(t)
     t.start()
