@@ -37,7 +37,7 @@ let bodies = stream::iter(urls)
     })
     .buffer_unordered(CONCURRENT_REQUESTS);
 
-CONCURRENT_REQUESTS);
+CONCURRENT_REQUESTS;
 
 Key Concepts:
 Ownership: The client owns the reqwest::Client instance.
@@ -84,7 +84,7 @@ std::for_each(futures.begin(), futures.end(), [](std::future<void>& f) {
 });
 
 
-});
+
 
 
 #Key Concepts:
