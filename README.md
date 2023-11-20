@@ -1,6 +1,8 @@
 # POPL_Assignment
 A comparative study between Rust &amp; C++ on concurrency, performance &amp; parsing using a locally hosted gunicorn API server
 
+![Concurrency](/doc/concurrency.webp)
+
 ## Problem Statement:
 - Weather forecasting applications often need to make multiple API
 - Requests concurrently to fetch both current and forecast data for different locations
