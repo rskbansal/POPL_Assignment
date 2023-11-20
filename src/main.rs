@@ -6,7 +6,7 @@ use tokio;
 use futures::{stream, StreamExt};
 use std::time::Instant;
 
-const CONCURRENT_REQUESTS: usize = 100;
+const CONCURRENT_REQUESTS: usize = 20;
 
 #[derive(Parser)]
 #[command(name="weather")]
