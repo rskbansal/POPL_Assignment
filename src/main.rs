@@ -25,7 +25,7 @@ async fn main() {
 
     let mut api_key: Option<String> = None;
     for(key,value) in std::env::vars(){
-        if key != "APIKEY"{
+        if key != "API_KEY"{
             continue;
         }
         api_key=Some(value)
@@ -39,7 +39,7 @@ async fn main() {
     // let args: Args = Args::parse();
 
     let client = reqwest::Client::new();
-    let urls = vec!["http://localhost:5000/get_weather?city=London"; CONCURRENT_REQUESTS];
+    let urls = vec!["http://localhost:5000/get_weather?city=London&api_key=p0pl-15-fun"; CONCURRENT_REQUESTS];
     // let url = format!("http://localhost:6969/get_weather?city=London");
 
     
