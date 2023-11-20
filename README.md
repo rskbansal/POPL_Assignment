@@ -84,7 +84,7 @@ std::for_each(futures.begin(), futures.end(), [](std::future<void>& f) {
 - Futures and Concurrency: Uses std::future to represent asynchronous tasks and manages them with std::for_each.
 
 ## Results:
-[PDF](./doc/Results.pdf)
+[PDF](./results/Results.pdf)
 
 
 ## Potential for Future Work:
