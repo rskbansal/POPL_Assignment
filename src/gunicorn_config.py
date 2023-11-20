@@ -1,2 +1,3 @@
-workers = 50  # You can adjust the number of worker processes based on your needs
-bind = '0.0.0.0:5000'  # Set the host and port for Gunicorn
+workers = 1
+threads = 20
+bind = '127.0.0.1:5000'
